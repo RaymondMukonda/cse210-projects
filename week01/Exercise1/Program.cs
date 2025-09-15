@@ -1,4 +1,5 @@
 using System;
+using System.Drawing;
 
 class Program
 {
@@ -18,15 +19,35 @@ class Program
 
 
 
+        Console.Write("Would you like to keep playing? ");
+        string response = Console.ReadLine();
+
+        while (response == "yes")
+        {
+            Console.Write("What is the magic number(1-10): ");
+            string userInput = Console.ReadLine();
+            int input = int.Parse(userInput);
+
+            Random randomGenerator = new Random();
+            int computerNumber = randomGenerator.Next(1, 11);
+
+            if (input == computerNumber)
+            {
+                Console.WriteLine("You guessed it right!");
+            }
+            else if (input < computerNumber)
+            {
+                Console.WriteLine("Lower");
+            }
+            else
+            {
+                Console.WriteLine("Higer");
+            }
+        }
 
 
 
-
-
-
-
-
-
+        
 
 
 
