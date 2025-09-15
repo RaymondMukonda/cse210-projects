@@ -23,7 +23,13 @@ class Program
 
 
 
+    string response = "yes";
 
+    while (response == "yes")
+    {
+        Console.Write("Do you want to continue? ");
+        response = Console.ReadLine();
+    }
 
     }
 }
