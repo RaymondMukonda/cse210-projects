@@ -27,8 +27,8 @@ class Program
 
     while (response == "yes")
     {
-        Console.Write("Do you want to continue? ");
-        response = Console.ReadLine();
+    Console.Write("Do you want to continue? ");
+    response = Console.ReadLine();
     }
 
     }
