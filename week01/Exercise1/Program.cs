@@ -54,33 +54,67 @@ class Program
         //     }
         // }
 
+        //    how to write lists 
+        // List<string> words = new List<string>();
 
-        List<string> words = new List<string>();
+        // words.Add("phone");
+        // words.Add("keyboard");
+        // words.Add("mouse");
 
-        words.Add("phone");
-        words.Add("keyboard");
-        words.Add("mouse");
+        // foreach (string word in words)
+        // {
+        //     Console.WriteLine(word);
 
-        foreach (string word in words)
-        {
-            Console.WriteLine(word);
+        // }
+        // Console.WriteLine(words.Count);
 
-        }
-        Console.WriteLine(words.Count);
-
-        for (int i = 0; i < words.Count; i++)
-        {
-            Console.WriteLine(words[i]);
-        }
-
-
+        // for (int i = 0; i < words.Count; i++)
+        // {
+        //     Console.WriteLine(words[i]);
+        // }
 
 
-        
+    DisplayMessage();  
 
+    string name = PromptUserName();            
+    int userFav = PromptUserNumber();           
+    int userSquared = PromptUserSquareNumber(userFav);  
 
-
-
+    DisplayResult(name, userFav, userSquared);
+    
     }
+
+    static void DisplayMessage()
+    {
+        Console.WriteLine("Welcome to the program!");
+    }
+
+    static string PromptUserName()
+    {
+        Console.Write("Please enter your name: ");
+        string name = Console.ReadLine();
+        return name;
+    }
+    
+    static int PromptUserNumber()
+    {
+        Console.Write("What is your fav number: ");
+        int userFav = int.Parse(Console.ReadLine());
+        return userFav;
+    }
+
+    static int PromptUserSquareNumber(int userInput)
+    {
+        int userSquared = userInput * userInput;
+        return userSquared;
+    }
+
+    static void DisplayResult(string name, int userFav, int userSqaured)
+    {
+        Console.WriteLine($"hi {name} your favourite num is {userFav} and here is your squared number is {userSqaured}");
+    }
+    
+    
+
 }
 
