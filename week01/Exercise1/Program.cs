@@ -74,47 +74,63 @@ class Program
         // }
 
 
-    DisplayMessage();  
+        // DisplayMessage();  
 
-    string name = PromptUserName();            
-    int userFav = PromptUserNumber();           
-    int userSquared = PromptUserSquareNumber(userFav);  
+        // string name = PromptUserName();            
+        // int userFav = PromptUserNumber();           
+        // int userSquared = PromptUserSquareNumber(userFav);  
 
-    DisplayResult(name, userFav, userSquared);
-    
-    }
+        // DisplayResult(name, userFav, userSquared);
 
-    static void DisplayMessage()
-    {
-        Console.WriteLine("Welcome to the program!");
-    }
 
-    static string PromptUserName()
-    {
-        Console.Write("Please enter your name: ");
-        string name = Console.ReadLine();
-        return name;
+
+
+
+
+
+
+
+        DisplayMessage();
+
     }
     
-    static int PromptUserNumber()
+
+
+    public static void DisplayMessage()
     {
-        Console.Write("What is your fav number: ");
-        int userFav = int.Parse(Console.ReadLine());
-        return userFav;
+        Console.WriteLine("Hello, Raymond!");
     }
 
-    static int PromptUserSquareNumber(int userInput)
-    {
-        int userSquared = userInput * userInput;
-        return userSquared;
-    }
+        // static void DisplayMessage()
+    // {
+    //     Console.WriteLine("Welcome to the program!");
+    // }
 
-    static void DisplayResult(string name, int userFav, int userSqaured)
-    {
-        Console.WriteLine($"hi {name} your favourite num is {userFav} and here is your squared number is {userSqaured}");
-    }
-    
-    
+    // static string PromptUserName()
+    // {
+    //     Console.Write("Please enter your name: ");
+    //     string name = Console.ReadLine();
+    //     return name;
+    // }
+
+    // static int PromptUserNumber()
+    // {
+    //     Console.Write("What is your fav number: ");
+    //     int userFav = int.Parse(Console.ReadLine());
+    //     return userFav;
+    // }
+
+    // static int PromptUserSquareNumber(int userInput)
+    // {
+    //     int userSquared = userInput * userInput;
+    //     return userSquared;
+    // }
+
+    // static void DisplayResult(string name, int userFav, int userSqaured)
+    // {
+    //     Console.WriteLine($"hi {name} your favourite num is {userFav} and here is your squared number is {userSqaured}");
+    // }
+
 
 }
 
