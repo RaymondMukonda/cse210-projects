@@ -86,51 +86,18 @@ class Program
 
 
 
+        Practise.DoSomething();
 
+        Person person = new Person();
+        person._givenName = "Raymond";
+        person._familyName = "Mukonda";
 
+        person.ShowEasternName();  
+        person.ShowWesternName();  
 
-
-        DisplayMessage();
+        MathHelper.SayHi(); // No need to create a MathHelper object
 
     }
     
-
-
-    public static void DisplayMessage()
-    {
-        Console.WriteLine("Hello, Raymond!");
-    }
-
-        // static void DisplayMessage()
-    // {
-    //     Console.WriteLine("Welcome to the program!");
-    // }
-
-    // static string PromptUserName()
-    // {
-    //     Console.Write("Please enter your name: ");
-    //     string name = Console.ReadLine();
-    //     return name;
-    // }
-
-    // static int PromptUserNumber()
-    // {
-    //     Console.Write("What is your fav number: ");
-    //     int userFav = int.Parse(Console.ReadLine());
-    //     return userFav;
-    // }
-
-    // static int PromptUserSquareNumber(int userInput)
-    // {
-    //     int userSquared = userInput * userInput;
-    //     return userSquared;
-    // }
-
-    // static void DisplayResult(string name, int userFav, int userSqaured)
-    // {
-    //     Console.WriteLine($"hi {name} your favourite num is {userFav} and here is your squared number is {userSqaured}");
-    // }
-
-
 }
 
