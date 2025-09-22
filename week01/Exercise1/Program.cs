@@ -1,6 +1,7 @@
 using System;
 using System.Drawing;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 
 class Program
 {
@@ -86,18 +87,59 @@ class Program
 
 
 
-        Practise.DoSomething();
+        // Practise.DoSomething();
 
-        Person person = new Person();
-        person._givenName = "Raymond";
-        person._familyName = "Mukonda";
+        // Person person = new Person();
+        // person._givenName = "Raymond";
+        // person._familyName = "Mukonda";
 
-        person.ShowEasternName();  
-        person.ShowWesternName();  
+        // person.ShowEasternName();  
+        // person.ShowWesternName();  
 
-        MathHelper.SayHi(); // No need to create a MathHelper object
+        // MathHelper.SayHi(); // No need to create a MathHelper object
+
+        Account savings = new Account();
+
+        savings.Deposit(100);
+        savings.Deposit(50);
+        savings.Deposit(25);
+        savings.Deposit(255);
+        savings.Deposit(28);
+
+        Console.WriteLine(savings); // Shows current balance
+
+        Console.WriteLine("Deposit History:");
+        foreach (int deposit in savings.GetDepositHistory())
+        {
+            Console.WriteLine($"- {deposit}");
+        }
 
     }
-    
+
+
+    class Account
+    {
+        private int _balance = 50;
+        private List<int> _depositHistory = new List<int>();
+
+        public void Deposit(int amount)
+        {
+            _balance += amount;
+            _depositHistory.Add(amount);
+            Console.WriteLine($"Deposited: {amount}");
+        }
+
+        public override string ToString()
+        {
+            return $"Account Balance: {_balance}";
+        }
+
+        public List<int> GetDepositHistory()
+        {
+            return _depositHistory;
+        }
+
+    }
+
 }
 
