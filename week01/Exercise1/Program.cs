@@ -112,7 +112,7 @@ class Program
         foreach (int deposit in savings.GetDepositHistory())
         {
             Console.WriteLine($"- {deposit}");
-        }
+        } 
 
     }
 
